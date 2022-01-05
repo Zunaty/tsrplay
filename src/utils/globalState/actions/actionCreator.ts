@@ -1,6 +1,6 @@
 import { ActionType } from "./actionTypes";
 import { Dispatch } from "redux";
-import { Action } from "../actions";
+import { Action } from ".";
 
 
 export const depositMoney = (amount: number) => {
@@ -21,11 +21,10 @@ export const withdrawMoney = (amount: number) => {
     };
 };
 
-export const bankrupt = (amount: number) => {
+export const bankrupt = () => {
     return (dispatch: Dispatch<Action>) => {
         dispatch({
-            type: ActionType.BANKRUPT,
-            payload: amount
+            type: ActionType.BANKRUPT
         })
     };
 };
